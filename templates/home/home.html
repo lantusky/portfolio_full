@@ -33,15 +33,15 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-8 col-md-7 py-4">
-            <h4 class="text-white">Tu Lan's Portfolio</h4>
-            <p class="text-muted">Hi I'm Bob!</p>
+            <h4 class="text-white">Welcome to My Portfolio</h4>
           </div>
           <div class="col-sm-4 offset-md-1 py-4">
-            <h4 class="text-white">Contact</h4>
+            <h4 class="text-white">Contacts</h4>
             <ul class="list-unstyled">
-              <li><a href="#" class="text-white">Follow on Twitter</a></li>
-              <li><a href="#" class="text-white">Like on Facebook</a></li>
-              <li><a href="#" class="text-white">Email me</a></li>
+              <li><a href="https://www.linkedin.com/in/tu-lan-561055125/" class="text-white">Connect on Linkedin</a></li>
+              <li><a href="https://github.com/lantusky" class="text-white">Connect on Github</a></li>
+              <p class="text-white">Email: lantusky2017@gmail.com</p>
+              <!-- <li>Tel: (669)204-6386</li> -->
             </ul>
           </div>
         </div>
@@ -55,7 +55,7 @@
             <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
             <circle cx="12" cy="13" r="4"></circle>
           </svg>
-          <strong>Album</strong>
+          <strong>Tu Lan's Portfolio</strong>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader"
           aria-expanded="false" aria-label="Toggle navigation">
@@ -70,9 +70,10 @@
     <section class="jumbotron text-center">
       <div class="container">
         <h1 class="jumbotron-heading">Tu Lan (Allen)</h1>
-        <p class="lead text-muted">Hi I'm Bob!</p>
+        <p class="lead text-black">Hi I'm Bob!</p>
         <p>
-          <a href="#" class="btn btn-primary my-2">Email Me</a>
+          <a href="https://github.com/lantusky" class="btn btn-primary my-2">Github</a>
+          <a href="https://www.linkedin.com/in/tu-lan-561055125/" class="btn btn-primary my-2">Linkedin</a>
         </p>
         <img src="{% static 'img/home/allen.jpg' %}" height=300>
       </div>
@@ -80,21 +81,54 @@
 
     <div class="album py-5 bg-light">
       <div class="container">
-
         <div class="row">
-
+          <!-- Real Estate Web App -->
           <div class="col-md-4">
-            <a href="{% url 'index' %}"></a>
             <div class="card mb-4 shadow-sm">
               <img src="{% static 'img/showcase.jpg' %}" class="card-img-top">
-              <div class="card-body">
+              <div class="card-body", >
                 <p class="card-text">Real Estate Web App</p>
+                <br>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    <a href="{% url 'index' %}">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    </a>
                   </div>
-                  <small class="text-muted">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image Edge Detection -->
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img src="{% static 'img/home/image_edge.png' %}" class="card-img-top">
+              <div class="card-body">
+                <p class="card-text">Deep Learning: Image Segmentation and Edge Detection</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="https://github.com/lantusky/Image-Edge-Detection">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ML Algorithm Implementation -->
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img src="{% static 'img/home/algorithm.png' %}" class="card-img-top">
+              <div class="card-body">
+                <p class="card-text">Implement Machine Learning Models & Algorithms From Scratch</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="https://github.com/lantusky/ML_Implement_From_Scratch">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
