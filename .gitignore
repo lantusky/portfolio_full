@@ -6,8 +6,8 @@
 __pycache__/
 local_settings.py
 db.sqlite3
-media
-static
+/media
+/static
 venv
 btre_resources
 Resource-Links.txt
