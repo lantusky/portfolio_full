@@ -136,47 +136,26 @@
         <div class="container">
           <div class="row">
             <!-- Real Estate Web App -->
+            {% for project in projects %}
             <div class="col-md-4">
               <div class="card mb-4 shadow-sm">
                 <img
-                  src="{% static 'img/showcase.jpg' %}"
+                  src="{% get_static_prefix %}{{ project.img_url }}"
                   class="card-img-top"
                 />
-                <div class="card-body" ,>
-                  <p class="card-text">Real Estate Web App</p>
+                <div class="card-body">
+                  <p class="card-text">{{ project.description }}</p>
                   <br />
                   <div
                     class="d-flex justify-content-between align-items-center"
                   >
                     <div class="btn-group">
-                      <a href="{% url 'index' %}">
-                        <button type="button" class="btn btn-outline-primary">
-                          View
-                        </button>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Image Edge Detection -->
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <img
-                  src="{% static 'img/home/image_edge.png' %}"
-                  class="card-img-top"
-                />
-                <div class="card-body">
-                  <p class="card-text">
-                    Deep Learning: Image Segmentation and Edge Detection
-                  </p>
-                  <div
-                    class="d-flex justify-content-between align-items-center"
-                  >
-                    <div class="btn-group">
-                      <a
-                        href="https://github.com/lantusky/Image-Edge-Detection"
+                      <a 
+                      {% if project.url_type == 'http' %}
+                        href="{{ project.project_url }}"
+                      {% else %}
+                        href="{% url project.project_url %}"
+                      {% endif %}
                       >
                         <button type="button" class="btn btn-outline-primary">
                           View
@@ -187,34 +166,7 @@
                 </div>
               </div>
             </div>
-
-            <!-- ML Algorithm Implementation -->
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <img
-                  src="{% static 'img/home/algorithm.png' %}"
-                  class="card-img-top"
-                />
-                <div class="card-body">
-                  <p class="card-text">
-                    Implement Machine Learning Models & Algorithms From Scratch
-                  </p>
-                  <div
-                    class="d-flex justify-content-between align-items-center"
-                  >
-                    <div class="btn-group">
-                      <a
-                        href="https://github.com/lantusky/ML_Implement_From_Scratch"
-                      >
-                        <button type="button" class="btn btn-outline-primary">
-                          View
-                        </button>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            {% endfor %}
           </div>
         </div>
       </div>
